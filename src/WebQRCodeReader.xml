@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="mendix.webqrcodereader.WebQRCodeReader" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web" 
+    xmlns="http://www.mendix.com/widget/1.0/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Web QRCode Reader</name>
+    <description>A web widget to scan QR codes</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="attr" type="attribute" required="true">
+                <caption>Attribute</caption>
+                <description>The scanned result will go here.</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+            <property key="delay" type="integer" defaultValue="500" required="true">
+                <caption>Delay</caption>
+                <description>Delay between scans in ms (default 500)</description>
+            </property>
+            <property key="onScanAction" type="action">
+                <caption>On Scan Action</caption>
+                <description>The new value will be set to the context object before this is triggered.</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
