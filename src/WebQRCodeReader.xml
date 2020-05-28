@@ -22,6 +22,10 @@
                 <caption>On Scan Action</caption>
                 <description>The new value will be set to the context object before this is triggered.</description>
             </property>
+            <property key="continuous" type="boolean" defaultValue="false">
+                <caption>Continuous?</caption>
+                <description>Should the widget keep scanning after a successful read?</description>
+            </property>
         </propertyGroup>
     </properties>
 </widget>
