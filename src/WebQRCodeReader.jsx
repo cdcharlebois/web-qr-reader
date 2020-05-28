@@ -8,21 +8,17 @@ import "./ui/WebQRCodeReader.css";
 class WebQRCodeReader extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            scanning: true
-        }
         this.handleScan = this.handleScan.bind(this);
         this.handleError = this.handleError.bind(this);
     }
 
     handleScan(data) {
-        const { attr, onScanAction } = this.props;
-        if (data && this.state.scanning) {
+        const { attr, onScanAction, isScanning } = this.props;
+        if (data && isScanning && isScanning.value === true) {
             console.log(`Scan: ${data}`);
             attr.setValue(data);
             if (onScanAction && onScanAction.canExecute) {
                 onScanAction.execute();
-                this.setState({ scanning: false });
             }
         }
 

@@ -22,9 +22,12 @@
                 <caption>On Scan Action</caption>
                 <description>The new value will be set to the context object before this is triggered.</description>
             </property>
-            <property key="continuous" type="boolean" defaultValue="false">
-                <caption>Continuous?</caption>
-                <description>Should the widget keep scanning after a successful read?</description>
+            <property key="isScanning" type="attribute" required="false">
+                <caption>Is Scanning Attribute</caption>
+                <description>The value of this attribute determines if the camera will trigger the action upon a successful read. For example, in your scan action, to handle an error case where the scanned value is invalid and you'd like to continue scanning, change the value back to true. Otherwise, set it to false. </description>
+                <attributeTypes>
+                    <attributeType name="Boolean" />
+                </attributeTypes>
             </property>
         </propertyGroup>
     </properties>
